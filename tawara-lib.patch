@@ -1,0 +1,11 @@
+--- tawara-master/CMakeLists.txt.orig	2013-08-19 07:45:02.000000000 +0200
++++ tawara-master/CMakeLists.txt	2013-09-19 20:17:55.632138180 +0200
+@@ -30,7 +30,7 @@
+ 
+ # Set up installation directories
+ set(BIN_INSTALL_DIR "bin")
+-set(LIB_INSTALL_DIR "lib")
++set(LIB_INSTALL_DIR "lib${LIB_SUFFIX}")
+ set(INC_INSTALL_DIR
+     "include/${PROJECT_NAME_LOWER}-${PROJECT_VERSION_MAJOR}")
+ set(SHARE_INSTALL_DIR
