@@ -2,16 +2,16 @@
 #
 # Conditional build:
 %bcond_without	apidocs		# do not build and package API docs
-#
+
+%define	snap	20130819
 Summary:	Tawara file format implementation
 Summary(pl.UTF-8):	Implementacja formatu plików Tawara
 Name:		tawara
 Version:	0.1.0
-%define	snap	20130819
-Release:	0.%{snap}.1
+Release:	0.%{snap}.2
 License:	BSD
 Group:		Libraries
-Source0:	http://github.com/gbiggs/tawara/archive/master.tar.gz?/tawara-%{snap}.tar.gz
+Source0:	http://github.com/gbiggs/tawara/archive/master/%{name}-%{snap}.tar.gz
 # Source0-md5:	682d240fad7fd3e74026fa7c2a660b1f
 Patch0:		%{name}-lib.patch
 URL:		http://gbiggs.github.io/tawara/
@@ -56,6 +56,9 @@ Pliki nagłówkowe biblioteki Tawara.
 Summary:	Tawara API documentation
 Summary(pl.UTF-8):	Dokumentacja API biblioteki Tawara
 Group:		Documentation
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
 
 %description apidocs
 API documentation for Tawara library.
@@ -64,7 +67,7 @@ API documentation for Tawara library.
 Dokumentacja API biblioteki Tawara.
 
 %prep
-%setup -q -n tawara-master
+%setup -q -n %{name}-master
 %patch0 -p1
 
 %build
