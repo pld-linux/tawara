@@ -1,0 +1,10 @@
+--- tawara-master/include/tawara/file_cluster.h~	2013-08-19 07:45:02.000000000 +0200
++++ tawara-master/include/tawara/file_cluster.h	2015-03-14 10:23:08.076088206 +0100
+@@ -39,6 +39,7 @@
+ #if !defined(TAWARA_FILE_CLUSTER_H_)
+ #define TAWARA_FILE_CLUSTER_H_
+ 
++#include <boost/iterator/iterator_facade.hpp>
+ #include <tawara/block_element.h>
+ #include <tawara/block_group.h>
+ #include <tawara/cluster.h>

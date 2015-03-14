@@ -8,12 +8,13 @@ Summary:	Tawara file format implementation
 Summary(pl.UTF-8):	Implementacja formatu plików Tawara
 Name:		tawara
 Version:	0.1.0
-Release:	0.%{snap}.2
+Release:	0.%{snap}.3
 License:	BSD
 Group:		Libraries
 Source0:	http://github.com/gbiggs/tawara/archive/master/%{name}-%{snap}.tar.gz
 # Source0-md5:	682d240fad7fd3e74026fa7c2a660b1f
 Patch0:		%{name}-lib.patch
+Patch1:		missing-header.patch
 URL:		http://gbiggs.github.io/tawara/
 # filesystem, system, date_time
 BuildRequires:	boost-devel
@@ -69,6 +70,7 @@ Dokumentacja API biblioteki Tawara.
 %prep
 %setup -q -n %{name}-master
 %patch0 -p1
+%patch1 -p1
 
 %build
 %cmake . \
