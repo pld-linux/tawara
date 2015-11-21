@@ -3,12 +3,13 @@
 # Conditional build:
 %bcond_without	apidocs		# do not build and package API docs
 
+%define	rel	4
 %define	snap	20130819
 Summary:	Tawara file format implementation
 Summary(pl.UTF-8):	Implementacja formatu plików Tawara
 Name:		tawara
 Version:	0.1.0
-Release:	0.%{snap}.3
+Release:	0.%{snap}.%{rel}
 License:	BSD
 Group:		Libraries
 Source0:	http://github.com/gbiggs/tawara/archive/master/%{name}-%{snap}.tar.gz
