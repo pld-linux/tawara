@@ -58,9 +58,7 @@ Pliki nagłówkowe biblioteki Tawara.
 Summary:	Tawara API documentation
 Summary(pl.UTF-8):	Dokumentacja API biblioteki Tawara
 Group:		Documentation
-%if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
-%endif
 
 %description apidocs
 API documentation for Tawara library.
